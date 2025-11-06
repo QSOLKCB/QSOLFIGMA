@@ -1,72 +1,91 @@
 # QSOLFIGMA  
-*Debloated Specification Template — Version v1.1.0*
+**Debloated Specification Template — v1.1.0**
 
 A lean, high-velocity template for publishing your design spec *and* delivering embedded updates inside Figma.  
-Built for the QSOL‑IMC ecosystem: minimal dependencies, maximum clarity.
+Built for the **QSOL-IMC** ecosystem: minimal dependencies, maximum clarity.
 
 ---
 
-## 🎯 Why this exists  
-- You want a spec template that **loads fast**, **installs clean**, and **evolves painlessly**.  
-- You don’t want a bloated design-system-framework that’ll age like a heavy Docker image.  
-- You want to ship **tokens**, **components**, **Figma links**, and **docs** in one tidy repo — and be done with it.
+## 🎯 Why This Exists
+- Loads fast. Installs clean. Evolves painlessly.  
+- Avoids bloated design-system frameworks that age like bad milk.  
+- Ships **tokens**, **components**, **Figma links**, and **docs** in one tidy repo — then gets out of your way.
 
 ---
 
-## 📦 What’s inside  
-- `index.html` — the entry point.  
-- `/src` — minimal React + TSX harness (optional) for live preview.  
-- `spec.tsx` (or `spec.md`) — the “QSOL SPEC v1.0” document: tokens, spacing, naming conventions, component library.  
-- `package.json`, `vite.config.ts` — super-light tooling to build/serve.  
-- Figma URL snippets / embed instructions for direct designer access.
+## 📦 What’s Inside
+| File | Purpose |
+|------|----------|
+| `index.html` | Minimal entry point |
+| `/src` | React + TS harness for live preview |
+| `spec.tsx` *(or `spec.md`)* | QSOL SPEC v1.1.0 — tokens, spacing, naming, components |
+| `package.json`, `vite.config.ts` | Lightweight tooling |
+| *(optional)* Figma embed snippets | Direct designer access |
 
 ---
 
-## 🚀 Installation  
+## 🚀 Installation
 ```bash
-# Clone the repo:
+# Clone the repo
 git clone https://github.com/QSOLKCB/QSOLFIGMA.git
 cd QSOLFIGMA
 
-# Install dependencies:
-npm ci   # or yarn install
+# Install dependencies
+npm ci  # or yarn install
 
-# Start dev server:
-npm run dev    # launches locally at http://localhost:3000
+# Start local server
+npm run dev
+# → http://localhost:3000
+To build for deployment:
+
+bash
+Copy code
+npm run build
 🧩 Usage
-Open the Figma file link found in the spec.
+Open the Figma file link in the spec.
 
-Apply tokens / styles from the “tokens” section.
+Apply tokens / styles from the tokens section.
 
-Use the component guidelines in the “components” section for building UI.
+Follow components guidelines for UI builds.
 
-When you update the spec, simply re-build & deploy (npm run build) and notify the team.
+After updates, re-build and deploy (npm run build) — then notify your team.
 
 🎨 Spec Highlights
-Spacing scale: 4 / 8 / 16 / 32px — no sprawling custom values.
+Category	Values
+Spacing Scale	4 / 8 / 16 / 32 px — no randoms
+Typography	Inter (Headings), JetBrains Mono (Code)
+Color System	neutral, accent, highlight — semantic and flat
+Naming Rules	Tokens → kebab-case; Components → PascalCase
+Base Components	Button, Card, Form — extend as needed
 
-Typography:
+🧹 Extension Rules
+Before adding anything, ask yourself:
 
-Headings: Inter
+Does it cut build time?
 
-Code / Mono: JetBrains Mono
+Does it cut file size?
 
-Color system: neutral, accent, highlight — flat, semantic.
+Does it make the spec clearer?
 
-Naming rules: Lower-kebab for tokens (e.g., spacing-small), Pascal for components (ButtonPrimary).
+If no, delete it.
+Keep the spec under 500 lines. Minimalism is clarity.
 
-Component set: Buttons, Cards, Forms — sufficient for MVP, extend as needed.
+📜 License
+MIT License © 2025 QSOL-IMC
+Fork, adapt, remix — but keep it lean and fast.
 
-🧹 Guidelines for Extension
-If you add a dependency, ask: “Does this reduce lines of code and build size?” If no, skip it.
+🧪 Contributing
+Open a pull request with:
 
-If you add a token, ask: “Is this genuinely reused across contexts?” If no, omit it.
+Your spec change or new token
 
-Keep the spec under 500 lines to preserve readability and minimal-ism.
+Updated package.json version (bump from v1.1.0 → next)
 
-📜 Licensing
-© 2025 QSOL-IMC · MIT-licensed
-Feel free to fork, adapt, and deploy — just keep it lean, keep it fast.
+We’ll review, merge, and keep the system pure.
 
-🧪 Want to contribute?
-Open a pull request, include your change in the spec, update the version in package.json (now v1.1.0) and we’ll review.
+⚡ QSOL Principle
+“Small code. Big impact.”
+– Trent Slade / EmergentMonk
+
+yaml
+Copy code
