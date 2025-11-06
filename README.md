@@ -1,5 +1,5 @@
 # QSOLFIGMA  
-*Debloated Specification Template — Version 1.0*
+*Debloated Specification Template — Version v1.1.0*
 
 A lean, high-velocity template for publishing your design spec *and* delivering embedded updates inside Figma.  
 Built for the QSOL‑IMC ecosystem: minimal dependencies, maximum clarity.
